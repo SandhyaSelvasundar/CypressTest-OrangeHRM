@@ -7,6 +7,14 @@ jobs:
   cypress-run-ui-tests:
     name: Cypress run
     runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chrome, edge, electron]
+    # from https://hub.docker.com/r/cypress/browsers/tags
+    container:
+      image: cypress/browsers:node-20.9.0-chrome-118.0.5993.88-1-ff-118.0.2-edge-118.0.2088.46-1
+      options: --user 1001
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -15,6 +23,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           record: true
+          browser: ${{ matrix.browser }}
         env:
           # pass GitHub token to allow accurately detecting a build vs a re-run build
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
