@@ -1,7 +1,6 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  projectId: 'y5sa3t',
   e2e: {
     baseUrl: 'https://opensource-demo.orangehrmlive.com/',
     watchForFileChanges: false,
