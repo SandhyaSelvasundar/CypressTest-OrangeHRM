@@ -64,8 +64,8 @@ class AdminPage{
         this.elements.Username().type('Personality Test');
         this.elements.Password().type('Personality#1');
         this.elements.ConfirmPassword().type('Personality#1');
-        this.elements.SaveAdd().click();
         this.elements.CancelAdd().should('be.enabled');
+        this.elements.SaveAdd().click();
 
     }
 
