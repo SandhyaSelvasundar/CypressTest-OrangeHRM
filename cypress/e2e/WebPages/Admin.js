@@ -29,7 +29,7 @@ class AdminPage{
         ResetButton : () => cy.get('.oxd-button--ghost'),
 
         //To Update User
-        EditSearchedUser : () => cy.xpath('//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div/div/div[6]/div/button[2]'),
+        EditSearchedUser : () => cy.get('i[class="oxd-icon bi-pencil-fill"]'),
         EditUserRole : () => cy.get('.oxd-select-text-input').eq(0),
         EditEmployeeName : () => cy.get('input[placeholder="Type for hints..."]'),
         EditStatusDropdown : () => cy.get('.oxd-select-text-input').eq(1),
