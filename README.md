@@ -29,7 +29,7 @@ git clone https://github.com/SandhyaSelvasundar/CypressTest-OrangeHRM.git
 ### Implementation
 - Applied **Page Object Model** design pattern to improves test case maintenance.
 - Covered CRUD Operation by Chai Assertions.
-- Used [Mochawsome Reporter](npm i cypress-mochawesome-reporter) for report generation.
+- Used [Mochawsome Reporter](https://www.npmjs.com/package/cypress-mochawesome-reporter) for report generation.
 - Implemented Continuous Integration (CI) using GitHub Actions with Docker Container Images.
 - Created parallel workflow jobs for Cross-browser testing .
 - Integrated Cypress Cloud to record test analysis.
